@@ -1,6 +1,7 @@
 import React from "react";
 import { Canvas } from "@react-three/fiber";
-import { OrbitControls, Environment, useGLTF } from "@react-three/drei";
+import { useGLTF } from "@react-three/drei";
+import { OrbitControls } from "@react-three/drei/core";
 
 interface ThreeDViewerProps {
   modelPath?: string;
@@ -12,7 +13,6 @@ const ThreeDViewer: React.FC<ThreeDViewerProps> = ({ modelPath }) => {
   return (
     <Canvas camera={{ position: [0, 1, 2], fov: 60 }}>
       <ambientLight intensity={0.5} />
-      <Environment preset="sunset" />
       <primitive object={scene} />
       <OrbitControls />
     </Canvas>
