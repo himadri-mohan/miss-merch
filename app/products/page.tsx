@@ -56,7 +56,7 @@ export default function Page() {
               <ThreeDViewer modelPath={product.glbUrl} />
             </Modal>
 
-            <p className="text-gray-500">${product.price}</p>
+            <p className="text-gray-500">SEK {product.price},00</p>
           </div>
         ))}
       </div>
