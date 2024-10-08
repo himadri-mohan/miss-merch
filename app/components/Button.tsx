@@ -1,4 +1,3 @@
-// components/Button.tsx
 import React from "react";
 
 interface ButtonProps {
@@ -8,22 +7,11 @@ interface ButtonProps {
 
 const Button: React.FC<ButtonProps> = ({ onClick, label }) => {
   return (
-    <button onClick={onClick} className="open-modal-button">
+    <button
+      onClick={onClick}
+      className="bg-pink-500 text-white py-2 px-4 rounded transition duration-300 hover:bg-pink-600 focus:outline-none focus:ring-2 focus:ring-pink-300"
+    >
       {label}
-      <style jsx>{`
-        .open-modal-button {
-          background-color: #0070f3;
-          color: white;
-          padding: 10px 20px;
-          border: none;
-          border-radius: 5px;
-          cursor: pointer;
-          transition: background-color 0.3s;
-        }
-        .open-modal-button:hover {
-          background-color: #005bb5;
-        }
-      `}</style>
     </button>
   );
 };
