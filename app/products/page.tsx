@@ -7,13 +7,13 @@ const products = [
     name: "Stylish T-Shirt",
     price: 20,
     imageUrl: "/images/visitkort.jpg",
-    image: "/images/visitkort.jpg",
+    glbUrl: "/visitkort/visitkort.glb",
   },
   {
     id: 2,
     name: "Visit Kort",
     price: 35,
-    imageUrl: "/images/product2.jpg",
+    imageUrl: "/images/martin.svg",
     image: "/images/product1.jpg",
   },
 ];
