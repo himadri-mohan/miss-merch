@@ -6,7 +6,7 @@ const products = [
     id: 1,
     name: "Stylish T-Shirt",
     price: 20,
-    imageUrl: "/images/visitkort.jpg",
+    imageUrl: "/images/visitkort.svg",
     glbUrl: "/visitkort/visitkort.glb",
   },
   {
@@ -37,6 +37,7 @@ export default function Page() {
               className="mx-auto mb-4"
             />
             <h3 className="text-xl font-semibold">{product.name}</h3>
+            <p className="text-gray-500">Visa i 3D</p>
             <p className="text-gray-500">${product.price}</p>
           </div>
         ))}
