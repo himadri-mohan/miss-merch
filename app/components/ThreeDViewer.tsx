@@ -7,7 +7,7 @@ interface ThreeDViewerProps {
 }
 
 const ThreeDViewer: React.FC<ThreeDViewerProps> = ({ modelPath }) => {
-  const { scene } = useGLTF(modelPath || "/images/visitkort.glb");
+  const { scene } = useGLTF(modelPath || "/images/demo_three.glb");
 
   return (
     <Canvas camera={{ position: [0, 1, 2], fov: 60 }}>
