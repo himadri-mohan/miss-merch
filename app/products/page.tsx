@@ -1,5 +1,11 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
+import Button from "../components/Button";
+import { useState } from "react";
+import Modal from "../components/Modal";
+import ThreeDViewer from "../components/ThreeDViewer";
 
 const products = [
   {
@@ -7,18 +13,23 @@ const products = [
     name: "Stylish T-Shirt",
     price: 20,
     imageUrl: "/images/visitkort.svg",
-    glbUrl: "/visitkort/visitkort.glb",
+    glbUrl: "/images/visitkort/visitkort.glb",
   },
   {
     id: 2,
     name: "Visit Kort",
     price: 35,
     imageUrl: "/images/martin.svg",
-    image: "/images/product1.jpg",
+    glbUrl: "/images/demo_three.glb",
   },
 ];
 
 export default function Page() {
+  const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
+
+  const handleOpenModal = () => setIsModalOpen(true);
+  const handleCloseModal = () => setIsModalOpen(false);
+
   return (
     <section className="text-center py-16 bg-pink-500 text-white">
       <h2 className="text-4xl mb-4">Some really cool products...</h2>
@@ -34,10 +45,17 @@ export default function Page() {
               alt={product.name}
               width={200}
               height={200}
+              priority={false}
               className="mx-auto mb-4"
             />
             <h3 className="text-xl font-semibold">{product.name}</h3>
-            <p className="text-gray-500">Visa i 3D</p>
+
+            <Button onClick={handleOpenModal} label="Visa i 3D" />
+
+            <Modal isOpen={isModalOpen} onClose={handleCloseModal}>
+              <ThreeDViewer modelPath={product.glbUrl} />
+            </Modal>
+
             <p className="text-gray-500">${product.price}</p>
           </div>
         ))}
