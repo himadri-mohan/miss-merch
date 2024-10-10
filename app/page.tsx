@@ -29,17 +29,17 @@ export default function Home() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <CategoryCard
             title="Business Cards"
-            imageUrl="/business-cards.jpg"
+            imageUrl="/images/martin.svg"
             label="Business Cards"
           />
           <CategoryCard
             title="T-Shirt Design"
-            imageUrl="/t-shirts.jpg"
+            imageUrl="/images/stylish-t.jpg"
             label="T-Shirts Design"
           />
           <CategoryCard
             title="Cup & Mug Design"
-            imageUrl="/cups.jpg"
+            imageUrl="/images/mug.png"
             label="Cup & Mug Design"
           />
         </div>
